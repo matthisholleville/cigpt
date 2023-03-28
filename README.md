@@ -16,13 +16,9 @@ This project is a fork of [k8sgpt](https://github.com/k8sgpt-ai/k8sgpt) and reli
 
 ## Installation
 
-### Linux/Mac
+### Linux/Mac/Windows
 
-Download the binary directly from the [release URL](https://gitlab.com/tpamp/cigpt/-/releases)
-
-### Windows
-
-Coming soon...
+Download the binary directly from the [release URL](https://github.com/cigpt-ai/cigpt/releases)
 
 ### Verify installation
 
@@ -36,13 +32,9 @@ Coming soon...
 
 <img src="images/demo4.gif" width=650px; />
 
-## Analyzers
+### Tools Supported
 
-cigpt uses analyzers to triage and diagnose issues in your pipeline.
-
-### Built in analyzers
-
-- [x] gitlabAnalyzer
+- [x] gitlab
 
 ## Usage
 

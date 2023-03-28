@@ -8,12 +8,12 @@ import (
 	"time"
 
 	"github.com/briandowns/spinner"
+	"github.com/cigpt-ai/cigpt/pkg/ai"
+	"github.com/cigpt-ai/cigpt/pkg/gitlab"
+	"github.com/cigpt-ai/cigpt/pkg/util"
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"gitlab.com/cigpt-ai/cigpt/pkg/ai"
-	"gitlab.com/cigpt-ai/cigpt/pkg/gitlab"
-	"gitlab.com/cigpt-ai/cigpt/pkg/util"
 )
 
 var (

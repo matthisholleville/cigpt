@@ -1,6 +1,6 @@
 package main
 
-import "gitlab.com/cigpt-ai/cigpt/cmd"
+import "github.com/cigpt-ai/cigpt/cmd"
 
 var version = "dev"
 
