@@ -1,0 +1,53 @@
+gitlab_urls:
+  # api: https://gitlab.com/api/v4/
+  # download: https://gitlab.com
+
+  # set to true if you use a self-signed certificate
+  skip_tls_verify: false
+
+  # set to true if you want to upload to the Package Registry rather than attachments
+  # Only works with GitLab 13.5+
+  # Since: v1.3.
+  use_package_registry: true
+
+  # Set this if you set GITLAB_TOKEN to the value of CI_JOB_TOKEN.
+  # Default: false
+  # Since: v1.11.
+  use_job_token: true
+env:
+  - GO111MODULE=on
+  - CGO_ENABLED=0
+  - GO_MODULENAME=gitlab.com/cigpt-ai/cigpt
+before:
+  hooks:
+    - go mod download
+builds:
+  - goarch:
+      - amd64
+      - arm64
+    goos:
+      - linux
+      - darwin
+    binary: sre-cli
+    ldflags:
+      - -s
+      - -w
+      - -X "{{.Env.GO_MODULENAME}}/configs.Version={{.Tag}}"
+      - -X "{{.Env.GO_MODULENAME}}/configs.BuildDate={{.Date}}"
+      - -X "{{.Env.GO_MODULENAME}}/configs.BuiltBy=goreleaser"
+      - -X "{{.Env.GO_MODULENAME}}/configs.GitCommit={{.ShortCommit}}"
+archives:
+  - format: binary
+    builds_info:
+      mode: 0755
+checksum:
+  name_template: "cigpt_{{ .Tag }}_SHA256SUMS.txt"
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^Merge branch"
