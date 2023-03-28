@@ -28,6 +28,7 @@ builds:
     goos:
       - linux
       - darwin
+      - windows
     binary: sre-cli
     ldflags:
       - -s
