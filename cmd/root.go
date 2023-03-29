@@ -3,8 +3,8 @@ package cmd
 import (
 	"os"
 
-	"github.com/cigpt-ai/cigpt/cmd/analyze"
-	"github.com/cigpt-ai/cigpt/cmd/auth"
+	"github.com/matthisholleville/cigpt/cmd/analyze"
+	"github.com/matthisholleville/cigpt/cmd/auth"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
