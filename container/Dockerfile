@@ -13,7 +13,7 @@ RUN go build -o /workspace/cigpt ./
 
 FROM gcr.io/distroless/static AS production
 
-LABEL org.opencontainers.image.source="https://github.com/cigpt-ai/cigpt" \
+LABEL org.opencontainers.image.source="https://github.com/matthisholleville/cigpt" \
     org.opencontainers.image.url="https://cigpt.io" \
     org.opencontainers.image.title="cigpt" \
     org.opencontainers.image.vendor="the cigpt-ai maintainers" \

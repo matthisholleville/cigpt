@@ -1,7 +1,7 @@
 <div align="center">
 <br />
 <p align="center">
-  <a href="https://gitlab.com/tpamp/cigpt">
+  <a href="https://github.com/matthisholleville/cigpt">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -18,7 +18,7 @@ This project is a fork of [k8sgpt](https://github.com/k8sgpt-ai/k8sgpt) and reli
 
 ### Pre-compiled executables
 
-Get them [here](https://github.com/cigpt-ai/cigpt/releases)
+Get them [here](https://github.com/matthisholleville/cigpt/releases)
 
 ### Verify installation
 

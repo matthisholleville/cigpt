@@ -8,10 +8,10 @@ import (
 	"time"
 
 	"github.com/briandowns/spinner"
-	"github.com/cigpt-ai/cigpt/pkg/ai"
-	"github.com/cigpt-ai/cigpt/pkg/gitlab"
-	"github.com/cigpt-ai/cigpt/pkg/util"
 	"github.com/fatih/color"
+	"github.com/matthisholleville/cigpt/pkg/ai"
+	"github.com/matthisholleville/cigpt/pkg/gitlab"
+	"github.com/matthisholleville/cigpt/pkg/util"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
