@@ -1,4 +1,4 @@
-module github.com/cigpt-ai/cigpt
+module github.com/matthisholleville/cigpt
 
 go 1.19
 

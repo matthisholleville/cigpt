@@ -5,13 +5,14 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/briandowns/spinner"
-	"github.com/cigpt-ai/cigpt/pkg/ai"
-	"github.com/cigpt-ai/cigpt/pkg/gitlab"
-	"github.com/cigpt-ai/cigpt/pkg/util"
 	"github.com/fatih/color"
+	"github.com/matthisholleville/cigpt/pkg/ai"
+	"github.com/matthisholleville/cigpt/pkg/gitlab"
+	"github.com/matthisholleville/cigpt/pkg/util"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -128,8 +129,12 @@ var AnalyzeCmd = &cobra.Command{
 			s.Start()
 			explanation, err := aiClient.GetCompletion(ctx, inputText)
 			if err != nil {
+				if strings.Contains(err.Error(), "status code: 429") {
+					color.Red("Exhausted API quota. Please try again later.")
+					os.Exit(1)
+				}
 				color.Red("Error: %v", err)
-				os.Exit(1)
+				continue
 			}
 			s.Stop()
 
