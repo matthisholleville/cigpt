@@ -7,10 +7,10 @@ import (
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "Print the version number of gitlabci-gpt",
-	Long:  `All software has versions. This is gitlabci-gpt's`,
+	Short: "Print the version number of cigpt",
+	Long:  `All software has versions. This is cigpt's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Printf("gitlabci-gpt version %s", version)
+		cmd.Printf("cigpt version %s", version)
 	},
 }
 

@@ -16,9 +16,9 @@ This project is a fork of [k8sgpt](https://github.com/k8sgpt-ai/k8sgpt) and reli
 
 ## Installation
 
-### Linux/Mac/Windows
+### Pre-compiled executables
 
-Download the binary directly from the [release URL](https://github.com/cigpt-ai/cigpt/releases)
+Get them [here](https://github.com/cigpt-ai/cigpt/releases)
 
 ### Verify installation
 
@@ -42,21 +42,21 @@ Download the binary directly from the [release URL](https://github.com/cigpt-ai/
 CI jobs debugging powered by AI
 
 Usage:
-  gitlabci-gpt [command]
+  cigpt [command]
 
 Available Commands:
   analyze     This command will analyze the error logs of a GitlabCI pipeline.
   auth        Authenticate with your chosen backend
   completion  Generate the autocompletion script for the specified shell
   help        Help about any command
-  version     Print the version number of gitlabci-gpt
+  version     Print the version number of cigpt
 
 Flags:
-      --config string   config file (default is $HOME/.gitlabci-gpt.yaml)
-  -h, --help            help for gitlabci-gpt
+      --config string   config file (default is $HOME/.cigpt.yaml)
+  -h, --help            help for cigpt
   -t, --toggle          Help message for toggle
 
-Use "gitlabci-gpt [command] --help" for more information about a command.
+Use "cigpt [command] --help" for more information about a command.
 ```
 
 _Run a scan with the gitlab analyzers_

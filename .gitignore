@@ -43,6 +43,6 @@ go.work
 .history
 .ionide
 
-gitlabci-gpt
+cigpt
 
 # End of https://www.toptal.com/developers/gitignore/api/go,visualstudiocode

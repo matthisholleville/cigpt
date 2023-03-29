@@ -16,7 +16,7 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "gitlabci-gpt",
+	Use:   "cigpt",
 	Short: "CI jobs debugging powered by AI",
 	Long:  ``,
 	// Uncomment the following line if your bare application
@@ -38,7 +38,7 @@ func init() {
 	cobra.OnInitialize(initConfig)
 	rootCmd.AddCommand(auth.AuthCmd)
 	rootCmd.AddCommand(analyze.AnalyzeCmd)
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.gitlabci-gpt.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.cigpt.yaml)")
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
@@ -55,7 +55,7 @@ func initConfig() {
 		// Search config in home directory with name ".gitlab-ci.git" (without extension).
 		viper.AddConfigPath(home)
 		viper.SetConfigType("yaml")
-		viper.SetConfigName(".gitlabci-gpt")
+		viper.SetConfigName(".cigpt")
 
 		viper.SafeWriteConfig()
 	}

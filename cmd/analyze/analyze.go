@@ -32,7 +32,7 @@ var AnalyzeCmd = &cobra.Command{
 		// get backend from file
 		backendType := viper.GetString("backend_type")
 		if backendType == "" {
-			color.Red("No backend set. Please run gitlabci-gpt auth")
+			color.Red("No backend set. Please run cigpt auth")
 			os.Exit(1)
 		}
 		// override the default backend if a flag is provided
@@ -43,19 +43,19 @@ var AnalyzeCmd = &cobra.Command{
 		token := viper.GetString(fmt.Sprintf("%s_key", backendType))
 		// check if nil
 		if token == "" {
-			color.Red("No %s key set. Please run gitlabci-gpt auth", backendType)
+			color.Red("No %s key set. Please run cigpt auth", backendType)
 			os.Exit(1)
 		}
 
 		//gitlab
 		gToken := viper.GetString("gitlab_token")
 		if token == "" {
-			color.Red("No gitlab token set. Please run gitlabci-gpt auth")
+			color.Red("No gitlab token set. Please run cigpt auth")
 			os.Exit(1)
 		}
 		gApiURL := viper.GetString("gitlab_api_url")
 		if token == "" {
-			color.Red("No gitlab api url set. Please run gitlabci-gpt auth")
+			color.Red("No gitlab api url set. Please run cigpt auth")
 			os.Exit(1)
 		}
 
