@@ -30,7 +30,7 @@ Get them [here](https://github.com/cigpt-ai/cigpt/releases)
 * Run `cigpt auth` to set it in cigpt.
 * Run `cigpt analyze --project-id $GITLAB_PROJECT_ID --pipeline-id $GITLAB_PIPELINE_ID` to run a scan.
 
-<img src="images/demo4.gif" width=650px; />
+https://user-images.githubusercontent.com/99146727/228486925-9bf16909-e4e1-44e8-952f-413aa52533a8.mov
 
 ### Tools Supported
 
